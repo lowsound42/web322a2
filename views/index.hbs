@@ -1,0 +1,353 @@
+<!-- 
+  WEB322 Assignment 1
+  Name: Omar Khan
+  Student Number: 132197203
+  Email: okhan27@myseneca.ca
+  Section NCC
+  Date: 10/6/2021
+  All the work in the project is my own except for stock photos, icons, and bootstrap files included
+ -->
+
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hoster</title>
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico" />
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./bootstrap-5.0.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/custom.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a href="/"><img src="assets/navlogo.png" alt="hoster logo" width="200" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/plans">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <br />
+    <div class="row justify-content-center">
+      <div>
+        <form class="card card-sm">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <i class="fas fa-search h4 text-body"></i>
+            </div>
+            <!--end of col-->
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless" type="search"
+                placeholder="Find your perfect domain">
+            </div>
+            <!--end of col-->
+            <div class="col-auto">
+              <button class="btn btn-lg btn-success" type="submit">Search</button>
+            </div>
+            <!--end of col-->
+          </div>
+        </form>
+      </div>
+      <!--end of col-->
+    </div>
+  </div>
+  <div class="container">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-sm-20 col-lg-6">
+        <img src="./assets/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" class="d-block mx-lg-auto img-fluid"
+          alt="Bootstrap Themes" width="800" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">We do hosting stuff</h1>
+        <p class="lead">The stuff that we do is so innovative! Buy our stuff. It will definitely be the best stuff
+          that you buy.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container top-buffer bottom-buffer">
+    <div class="row">
+      <div class="col-md">
+        <div class="card text-center spec-card">
+          <div class="card-body spec-card-body">
+            <img class="card-img-top spec-image" src="./assets/jj-ying-8bghKxNU1j0-unsplash.jpg" alt="Card image cap">
+            <h5 class="card-title">Web Hosting</h5>
+            <p class="card-text">Get fast and unlimited web hosting for your site</p>
+            <a href="#" class="btn btn-primary">Get Hosting</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center spec-card">
+          <div class="card-body spec-card-body">
+            <img class="card-img-top spec-image" src="./assets/c-dustin-K-Iog-Bqf8E-unsplash.jpg" alt="Card image cap">
+            <h5 class="card-title">Cloud Servers</h5>
+            <p class="card-text">Take full control with our fastest virtual servers
+            </p>
+            <a href="#" class="btn btn-primary">Compare Clouds</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center spec-card">
+          <div class="card-body spec-card-body">
+            <img class="card-img-top spec-image" src="./assets/kelvin-ang-QvU0LNnr26U-unsplash.jpg"
+              alt="Card image cap">
+            <h5 class="card-title">Dedicated Servers</h5>
+            <p class="card-text">Boost your business with dedicated hardware
+            </p>
+            <a href="#" class="btn btn-primary">View Servers</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center spec-card">
+          <div class="card-body spec-card-body">
+            <img class="card-img-top spec-image" src="./assets/markus-winkler-3hBH-ZuvppU-unsplash.jpg"
+              alt="Card image cap">
+            <h5 class="card-title">Get WordPress</h5>
+            <p class="card-text">Manage your WordPress websites easily</p>
+            <a href="#" class="btn btn-primary">Get WordPress</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container top-buffer bottom-buffer">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Grow your business</h1>
+        <p class="lead">Every business needs an incredible website. We can help you build your online presence!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button>
+        </div>
+      </div>
+      <div class="col-sm-20 col-lg-6">
+        <img src="./assets/brooke-cagle-ICTKcvnXx_8-unsplash.jpg" class="d-block mx-lg-auto img-fluid"
+          alt="Bootstrap Themes" width="800" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="card text-center" style="height: 12rem;">
+          <div class="card-body">
+            <i class="fas fa-tachometer-alt"></i>
+            <h5 class="card-title">Built for speed
+            </h5>
+            <p class="card-text">Up to 3x faster than competitors.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center" style="height: 12rem;">
+          <div class="card-body">
+            <i class="fas fa-gamepad"></i>
+            <h5 class="card-title">World’s Best Control Panel
+            </h5>
+            <p class="card-text">Powered by cPanel with Cloudlinux.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center" style="height: 12rem;">
+          <div class="card-body">
+            <i class="fas fa-mouse-pointer"></i>
+            <h5 class="card-title">1-Click Installs
+            </h5>
+            <p class="card-text">Over 300 Apps, including WordPress, Drupal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row top-buffer">
+      <div class="col-md">
+        <div class="card text-center" style="height: 12rem;">
+          <div class="card-body">
+            <i class="fas fa-globe-americas"></i>
+            <h5 class="card-title">Canadian Geolocation
+            </h5>
+            <p class="card-text">Get closer to your clients with servers located on the Canadian East & West
+              Coasts.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center" style="height: 12rem;">
+          <div class="card-body">
+            <i class="fas fa-clock"></i>
+            <h5 class="card-title">24/7 Expert Assistance
+            </h5>
+            <p class="card-text">To give you the help you need, when you need it.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card text-center" style="height: 12rem;">
+          <div class="card-body">
+            <i class="fas fa-shield-alt"></i>
+            <h5 class="card-title">Built-in security
+            </h5>
+            <p class="card-text">To keep your site safe from hackers & malware.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-sm-20 col-lg-6">
+        <img src="./assets/logo_transparent.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">24x7 Service</h1>
+        <p class="lead">Reach out today to get started.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <footer class="text-center text-lg-start bg-light text-muted top-buffer">
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+          <h4>Get in touch with us:</h4>
+        </div>
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Hoster
+              </h6>
+              <p>
+                We're the premium web hosting service coming at you out of Toronto, Canada.
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Cloud Services</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Web Hosting</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Dedicated Servers</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">WordPress</a>
+              </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="./plans" class="text-reset">Plans</a>
+              </p>
+              <p>
+                <a href="./registration" class="text-reset">Registration</a>
+              </p>
+              <p>
+                <a href="./login" class="text-reset">Login</a>
+              </p>
+              <p>
+                <a href="./" class="text-reset">Home</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Contact
+              </h6>
+              <p><i class="fas fa-home me-3"></i> Toronto, Canada, right next to the huge Loblaws at Maple Leaf
+                Gardens</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                <a href="mailto:okhan27@myseneca.ca">okhan27@myseneca.ca</a>
+              </p>
+              <p>
+                <i class="fas fa-phone me-3"></i>
+                <a href='tel:+1(555)555-5555'>+1(555)555-5555</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        &copy;
+        <span id="copyright">
+          <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        </span>
+        <a class="text-reset fw-bold" href="./">HOSTER</a>
+      </div>
+    </footer>
+  </div>
+  <script src="./bootstrap-5.0.1-dist/js/bootstrap.bundle.js"></script>
+
+
+</body>
+
+</html>
