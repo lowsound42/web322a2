@@ -59,19 +59,21 @@
       <h3 class="well bottom-buffer top-padding">Sign in to your Hoster account</h3>
       <div class="col-lg-12 well">
         <div class="row">
-          <form action="/login" method="GET">
+          <form action="/validateLoginInputs" method="Post">
             <div class="col-sm-12">
 
               <div class="row">
                 <div class="col-lg-12 form-group">
                   <label for="uname">Username</label>
                   <input id="uname" name="uname" type="text" placeholder="Username" class="form-control">
+                  <p class="error">{{data.uError}}</p>
                 </div>
               </div>
               <div class="row top-buffer">
                 <div class="col-lg-12 form-group ">
                   <label for="password">Password</label>
                   <input id="password" name="password" type="password" placeholder="Password" class="form-control">
+                  <p class="error">{{data.pError}}</p>
                 </div>
               </div>
               <div class="remember top-buffer"> <input type="checkbox" id="remember" name="Remember Me">
