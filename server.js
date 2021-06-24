@@ -145,16 +145,16 @@ app.post('/validateLoginInputs', (req, res) => {
 
 app.post('/validateRegInputs', (req, res) => {
     let formData;
-    let pError = null;
-    let uError = null;
-    let telError = null;
-    let addError = null;
-    let cityError = null;
-    let provError = null;
-    let postalError = null;
-    let countryError = null;
-    let taxError = null;
-    let emailError = null;
+    let pError = false;
+    let uError = false;
+    let telError = false;
+    let addError = false;
+    let cityError = false;
+    let provError = false;
+    let postalError = false;
+    let countryError = false;
+    let taxError = false;
+    let emailError = false;
     if (req.body) {
         formData = req.body;
     }
@@ -191,7 +191,7 @@ app.post('/validateRegInputs', (req, res) => {
 
     if (formData.emailadd.length === 0) {
         emailError = 'Please enter an email address';
-    } else if (!regEmail.test(formData.email)) {
+    } else if (!regEmail.test(formData.emailadd)) {
         emailError = 'Please enter a valid email address';
     }
 
@@ -204,36 +204,19 @@ app.post('/validateRegInputs', (req, res) => {
         uError = 'Please enter a username!';
     }
 
-    if (emailError !== null) {
-        formData.emailError = emailError;
-    }
-    if (pError !== null) {
-        formData.pError = pError;
-    }
-    if (uError !== null) {
-        formData.uError = uError;
-    }
-    if (telError !== null) {
-        formData.telError = telError;
-    }
-    if (addError !== null) {
-        formData.addError = addError;
-    }
-    if (cityError !== null) {
-        formData.cityError = cityError;
-    }
-    if (countryError !== null) {
-        formData.countryError = countryError;
-    }
-    if (provError !== null) {
-        formData.provError = provError;
-    }
-    if (taxError !== null) {
-        formData.taxError = taxError;
-    }
-    if (postalError !== null) {
-        formData.postalError = postalError;
-    }
+    formData.emailError = emailError;
+    console.log(formData.emailError);
+    formData.pError = pError;
+    formData.uError = uError;
+    formData.telError = telError;
+    formData.addError = addError;
+    formData.uError = uError;
+    formData.cityError = cityError;
+    formData.countryError = countryError;
+    formData.provError = provError;
+    formData.taxError = taxError;
+    formData.postalError = postalError;
+
     if (formData.pword.length > 0 && pError === null) {
         res.render('dashboard', {
             data: formData,

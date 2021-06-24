@@ -76,23 +76,31 @@
                     <label for="uname">Username</label>
                     <input id="uname" name="uname" type="text" placeholder="Username" value="{{data.uname}}"class="form-control">
                   </div>
+                  {{#if data.uError}}
                     <p class="error">{{data.uError}}</p>
+                  {{/if}}
                   <div class="col-sm-6 form-group top-buffer">
                     <label for="pword">Password</label>
                     <input id="pword" name="pword" type="password" placeholder="Password" class="form-control">
+                    {{#if data.pError}}
                     <p class="error">{{data.pError}}</p>
+                    {{/if}}
                   </div>
                 </div>
                 <div class="row top-buffer">
                   <div class=" col-sm-6 form-group">
                     <label for="phone">Phone Number</label>
                     <input id="phone" name="phone" type="text" placeholder="Phone" value="{{data.phone}}" class="form-control">
+                    {{#if data.telError}}
                     <p class="error">{{data.telError}}</p>
+                    {{/if}}
                   </div>
                   <div class="col-sm-6 form-group">
                     <label for="emailadd">Email Address</label>
                     <input id="emailadd" name="emailadd" type="email" placeholder="Email" value="{{data.emailadd}}" class="form-control">
+                    {{#if data.emailError}}
                     <p class="error">{{data.emailError}}</p>
+                    {{/if}}
                   </div>
                 </div>
               </fieldset>
@@ -106,7 +114,9 @@
                   <label for="addressone">Street Address 1</label>
                   <textarea id="addressone" name="addressone" placeholder="Street Address 1" value="{{data.addressone}}" rows="1"
                     class="form-control"></textarea>
+                    {{#if data.addError}}
                    <p class="error">{{data.addError}}</p>
+                   {{/if}}
                 </div>
                 <div class="form-group top-buffer">
                   <label for="addresstwo">Street Address 2</label>
@@ -118,30 +128,40 @@
                 <div class="col-sm-4 form-group">
                   <label for="city">City</label>
                   <input id="city" name="city" type="text" placeholder="City" value="{{data.city}}" class="form-control">
+                  {{#if data.cityError}}
                   <p class="error">{{data.cityError}}</p>
+                  {{/if}}
                 </div>
                 <div class="col-sm-4 form-group">
                   <label for="province">Province</label>
                   <input id="province" name="province" type="text" placeholder="State" value="{{data.province}}" class="form-control">
+                  {{#if data.provError}}
                   <p class="error">{{data.provError}}</p>
+                  {{/if}}
                 </div>
                 <div class="col-sm-4 form-group">
                   <label for="postal">Postal Code</label>
                   <input id="postal" name="postal" type="text" placeholder="Postal Code" value="{{data.postal}}" class="form-control">
+                  {{#if data.postalError}}
                   <p class="error">{{data.postalError}}</p>
+                  {{/if}}
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6 form-group top-buffer">
                   <label for="country" class="sr-only">Country</label>
                   <input id="country" name="country" type="text" placeholder="Country" value="{{data.country}}" class="form-control">
+                  {{#if data.countryError}}
                   <p class="error">{{data.countryError}}</p>
+                  {{/if}}
                 </div>
               </div>
               <div class="form-group top-buffer">
                 <label for="taxid">Tax ID</label>
                 <input id="taxid" name="taxid" type="text" placeholder="Tax ID" value="{{data.taxid}}" class="form-control">
+                {{#if data.taxError}}
                 <p class="error">{{data.taxError}}</p>
+                {{/if}}
               </div>
               <input type="submit" class="btn btn-lg btn-info top-buffer bottom-buffer" value="Submit" />
             </div>
