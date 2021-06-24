@@ -106,8 +106,8 @@ app.get('/registration', (req, res) => {
 });
 
 app.post('/validateLoginInputs', (req, res) => {
-    let pError = null;
-    let uError = null;
+    let pError = false;
+    let uError = false;
     let formData;
     if (req.body) {
         formData = req.body;
@@ -123,14 +123,13 @@ app.post('/validateLoginInputs', (req, res) => {
     if (formData.uname.length === 0) {
         uError = 'Please enter a username!';
     }
-    if (uError !== null) {
-        formData.uError = uError;
-    }
 
-    if (pError !== null) {
-        formData.pError = pError;
-    }
-    if (formData.password.length > 0 && pError === null) {
+    formData.uError = uError;
+    formData.pError = pError;
+    formData.registration = false;
+    formData.login = true;
+
+    if (formData.password.length > 0 && pError === false) {
         res.render('dashboard', {
             data: formData,
             layout: false
@@ -205,7 +204,6 @@ app.post('/validateRegInputs', (req, res) => {
     }
 
     formData.emailError = emailError;
-    console.log(formData.emailError);
     formData.pError = pError;
     formData.uError = uError;
     formData.telError = telError;
@@ -216,8 +214,10 @@ app.post('/validateRegInputs', (req, res) => {
     formData.provError = provError;
     formData.taxError = taxError;
     formData.postalError = postalError;
+    formData.registration = true;
+    formData.login = false;
 
-    if (formData.pword.length > 0 && pError === null) {
+    if (formData.pword.length > 0 && pError === false) {
         res.render('dashboard', {
             data: formData,
             layout: false
