@@ -29,6 +29,7 @@ app.get('/', (req, res) => {
 app.get('/plans', (req, res) => {
     const data = [
         {
+            personal: true,
             title: 'Personal',
             description: 'Affordable plan, great for personal projects',
             price: 'C$3.89/mo',
@@ -43,6 +44,7 @@ app.get('/plans', (req, res) => {
             ]
         },
         {
+            pro: true,
             title: 'Pro',
             description:
                 'Pro performance, premium features, free domain, and more!',
@@ -63,6 +65,7 @@ app.get('/plans', (req, res) => {
             ]
         },
         {
+            enterprise: true,
             title: 'Enterprise',
             description:
                 'Best performance for demanding websites, with SSL & dedicated IP',
