@@ -8,8 +8,6 @@
   All the work in the project is my own except for stock photos, icons, and bootstrap files included
 */
 
-import { data } from './data.js';
-
 function createCardTitle(src) {
     let title = document.createElement('h5');
     let titleText = document.createTextNode(src);
@@ -91,12 +89,5 @@ function createCard(element) {
     let listItems = createCardList(element.items);
     listItems.map((element) => {
         listContainer.appendChild(element);
-    });
-}
-
-if (data) {
-    console.log("let's go");
-    data.map((element) => {
-        createCard(element);
     });
 }

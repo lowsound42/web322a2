@@ -85,3 +85,7 @@
     color: #ff0000;
     font-size: 0.8rem;
 }
+
+.dashboardSpan {
+    font-weight: bold;
+}

@@ -67,15 +67,18 @@
   </div>
   <div class="container bottom-buffer">
     <div class="row">
-      <div class=" col-lg card" id="cardOne">
-
+      {{#each data}}
+      <div class=" col-lg card" id="card">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.description}}</p>
+        <p class="card-text">{{this.price}}</p>
+        <ul class="list-group list-group-flush">
+          {{#each this.items}}
+          <li class="list-group-item">{{this}}</li>
+          {{/each}}
+        </ul>
       </div>
-      <div class=" col-lg card" id="cardTwo">
-
-      </div>
-      <div class=" col-lg card" id="cardThree">
-
-      </div>
+      {{/each}}
     </div>
   </div>
   <div class="container top-buffer">

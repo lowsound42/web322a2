@@ -27,7 +27,65 @@ app.get('/', (req, res) => {
 });
 
 app.get('/plans', (req, res) => {
+    const data = [
+        {
+            title: 'Personal',
+            description: 'Affordable plan, great for personal projects',
+            price: 'C$3.89/mo',
+            items: [
+                'STARTER Performance',
+                'Single Website',
+                'Unlimited Space and Traffic',
+                'Powered by renewable energy',
+                'All-inclusive STARTER email',
+                'Standard hosting features',
+                'Free site migration'
+            ]
+        },
+        {
+            title: 'Pro',
+            description:
+                'Pro performance, premium features, free domain, and more!',
+            price: 'C$3.92/mo',
+            items: [
+                'PRO Performance',
+                'Unlimited Websites',
+                'Unlimited Space and Traffic',
+                'Powered by renewable energy',
+                'All-inclusive PRO email',
+                'Standard hosting features',
+                'Free site migration',
+                'Free domain',
+                'Optimized for WordPress',
+                'Premium Features',
+                'Email Marketing',
+                'SSL certificate'
+            ]
+        },
+        {
+            title: 'Enterprise',
+            description:
+                'Best performance for demanding websites, with SSL & dedicated IP',
+            price: 'C$11.89/mo',
+            items: [
+                'ENTERPRISE Performance',
+                'Unlimited Websites',
+                'Unlimited Space and Traffic',
+                'Powered by renewable energy',
+                'All-inclusive ENTERPRISE email',
+                'Standard hosting features',
+                'Free site migration',
+                'Free domain',
+                'Optimized for WordPress',
+                'Premium Features',
+                'Email Marketing',
+                'SSL certificate',
+                'Dedicated IP'
+            ]
+        }
+    ];
     res.render('plans', {
+        data: data,
         layout: false
     });
 });
@@ -136,7 +194,7 @@ app.post('/validateRegInputs', (req, res) => {
 
     if (!regTel.test(formData.phone)) {
         telError =
-            'Please enter a phone number in one of the following formats:\n123-456-789\n(123) 456-7890\n123 456 7890\n123.456.7890\n+91 (123) 456-7890\n';
+            'Please enter a valid phone number (eg: 416.555.5555 or 416-555-5555 or 4165555555)';
     }
 
     if (formData.uname.length === 0) {
