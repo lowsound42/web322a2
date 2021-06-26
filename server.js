@@ -13,7 +13,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
-app.engine('.hbs', exphbs({ extname: '.hbs' }));
+app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'main' }));
 app.set('view engine', '.hbs');
 
 app.use(express.static('static'));
@@ -21,8 +21,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
+    const page = { home: true };
     res.render('index', {
-        layout: false
+        page: page
     });
 });
 
@@ -87,21 +88,26 @@ app.get('/plans', (req, res) => {
             ]
         }
     ];
+    const page = { plan: true };
     res.render('plans', {
         data: data,
-        layout: false
+        page: page
     });
 });
 
 app.get('/login', (req, res) => {
+    const page = { login: true };
     res.render('login', {
-        layout: false
+        page: page,
+        layout: 'form'
     });
 });
 
 app.get('/registration', (req, res) => {
+    const page = { registration: true };
     res.render('registration', {
-        layout: false
+        page: page,
+        layout: 'form'
     });
 });
 
@@ -112,7 +118,6 @@ app.post('/validateLoginInputs', (req, res) => {
     if (req.body) {
         formData = req.body;
     }
-    console.log(formData);
     const regPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (formData.password.length === 0) {
         pError = 'Please enter a password!';
@@ -137,7 +142,7 @@ app.post('/validateLoginInputs', (req, res) => {
     } else {
         res.render('login', {
             data: formData,
-            layout: false
+            layout: 'form'
         });
     }
 });
@@ -220,12 +225,12 @@ app.post('/validateRegInputs', (req, res) => {
     if (formData.pword.length > 0 && pError === false) {
         res.render('dashboard', {
             data: formData,
-            layout: false
+            layout: 'form'
         });
     } else {
         res.render('registration', {
             data: formData,
-            layout: false
+            layout: 'form'
         });
     }
 });

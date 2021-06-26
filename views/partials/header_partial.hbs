@@ -1,0 +1,27 @@
+  <nav class="navbar navbar-expand-lg navbar-light special">
+      <div class="container">
+        <a href="/"><img src="assets/navlogo.png" alt="hoster logo" width="200" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link {{#if page.home}} active{{/if}}"  {{#if page.home}} aria-current="page" {{/if}} href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{#if page.plan}} active{{/if}}"  {{#if page.plan}} aria-current="page" {{/if}} href="/plans">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{#if page.registration}} active{{/if}}"  {{#if page.registration}} aria-current="page" {{/if}} href="
+                /registration">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{#if page.login}} active{{/if}}"  {{#if page.login}} aria-current="page" {{/if}}  href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
