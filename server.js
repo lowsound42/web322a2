@@ -133,15 +133,16 @@ app.post('/validateLoginInputs', (req, res) => {
     formData.pError = pError;
     formData.registration = false;
     formData.login = true;
-
     if (formData.password.length > 0 && pError === false) {
         res.render('dashboard', {
             data: formData,
-            layout: false
+            page: { dashboard: true },
+            layout: 'form'
         });
     } else {
         res.render('login', {
             data: formData,
+            page: { login: true },
             layout: 'form'
         });
     }
