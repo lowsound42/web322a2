@@ -158,7 +158,7 @@ app.post('/validateRegInputs', (req, res) => {
     let provError = false;
     let postalError = false;
     let countryError = false;
-    let taxError = false;
+    // let taxError = false;
     let emailError = false;
     if (req.body) {
         formData = req.body;
@@ -180,9 +180,9 @@ app.post('/validateRegInputs', (req, res) => {
     formData.postal.length === 0
         ? (postalError = 'Postal Code cannot be empty')
         : (postalError = null);
-    formData.taxid.length === 0
-        ? (taxError = 'Tax ID cannot be empty')
-        : (taxError = null);
+    // formData.taxid.length === 0
+    //     ? (taxError = 'Tax ID cannot be empty')
+    //     : (taxError = null);
     formData.province.length === 0
         ? (provError = 'Province cannot be empty')
         : (provError = null);
@@ -218,7 +218,7 @@ app.post('/validateRegInputs', (req, res) => {
     formData.cityError = cityError;
     formData.countryError = countryError;
     formData.provError = provError;
-    formData.taxError = taxError;
+    // formData.taxError = taxError;
     formData.postalError = postalError;
     formData.registration = true;
     formData.login = false;

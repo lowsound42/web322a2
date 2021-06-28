@@ -24,7 +24,7 @@
 
 <body class="gradient">
   <div class="container">
-    <div class="container holder top-buffer reg">
+    <div class="container top-buffer reg formHolder">
       <h1 class="well">Registration Form</h1>
       <div class="col-lg-12 well">
         <div class="row">
@@ -127,14 +127,14 @@
                   {{/if}}
                 </div>
               </div>
-              <div class="form-group top-buffer">
+              {{!-- <div class="form-group top-buffer">
                 <label for="taxid">Tax ID</label>
                 <input id="taxid" name="taxid" type="text" placeholder="Tax ID" value="{{data.taxid}}" class="form-control">
                 {{#if data.taxError}}
                 <p class="error">{{data.taxError}}</p>
                 {{/if}}
-              </div>
-              <input type="submit" class="btn btn-lg btn-info top-buffer bottom-buffer" value="Submit" />
+              </div> --}}
+              <input type="submit" class="btn btn-md btn-info top-buffer bottom-buffer" value="Submit" />
             </div>
           </form>
           <div class="spec-flex">
